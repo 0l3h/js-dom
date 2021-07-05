@@ -1,5 +1,30 @@
 'use strict';
 
+// ******************Изменение текста кнопки****************
+
+const buttonElement = document.querySelector('button');
+
+let isChangedText = false;
+
+buttonElement.addEventListener('click', e => {
+    isChangedText = !isChangedText;
+    if(isChangedText) {
+        buttonElement.innerText = 'Changed text';
+    } else {
+        buttonElement.innerText = 'Initial text';
+    }                                            
+});
+
+// **********Изменение картинки при наведении мыши**********
+
+const imageElement = document.querySelector('img');
+
+imageElement.addEventListener('mouseenter', e => {
+    imageElement.setAttribute('src', 'https://cdna.artstation.com/p/assets/images/images/035/634/334/large/bogdan-mb0sco-jhc-nightwalk-closeup1.jpg?1615476078');
+});
+
+// ****************Генерация структуры HTML*****************
+
 const rootElement = document.getElementById('root');
 
 const h1Element = document.createElement('h1');
